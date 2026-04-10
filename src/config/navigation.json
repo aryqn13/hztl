@@ -1,0 +1,30 @@
+[
+  {
+    "id": "home",
+    "type": "NavItem",
+    "label": "Home",
+    "hasDropdown": false,
+    "authRequired": false
+  },
+  {
+    "id": "training",
+    "type": "NavItem",
+    "label": "Training",
+    "hasDropdown": true,
+    "authRequired": true
+  },
+  {
+    "id": "certification",
+    "type": "NavItem",
+    "label": "Certification",
+    "hasDropdown": true,
+    "authRequired": true
+  },
+  {
+    "id": "contact",
+    "type": "NavItem",
+    "label": "Contact us",
+    "hasDropdown": false,
+    "authRequired": false
+  }
+]

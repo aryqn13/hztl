@@ -1,0 +1,29 @@
+{
+  "section": {
+    "title": "Category Listing",
+    "intro": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the, when an unknown printer took a galley."
+  },
+  "cards": [
+    {
+      "id": "frontend",
+      "type": "Card",
+      "title": "Frontend Solutions",
+      "iconPath": "/src/images/frontend-solution-logo.svg",
+      "bottomBarColor": "brand-teal"
+    },
+    {
+      "id": "backend",
+      "type": "Card",
+      "title": "Backend Solutions",
+      "iconPath": "/src/images/backend-solution-logo.svg",
+      "bottomBarColor": "brand-teal"
+    },
+    {
+      "id": "devops",
+      "type": "Card",
+      "title": "DevOps Solutions",
+      "iconPath": "/src/images/devops-solution-logo.svg",
+      "bottomBarColor": "brand-teal"
+    }
+  ]
+}

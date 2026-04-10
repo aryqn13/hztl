@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modern Era — load only weights you use to keep first paint light */
+@font-face {
+  font-family: 'Modern Era';
+  src:
+    url('/fonts/ModernEra-Regular-woff2.woff2') format('woff2'),
+    url('/fonts/ModernEra-Regular-woff.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Modern Era';
+  src:
+    url('/fonts/ModernEra-Medium-woff2.woff2') format('woff2'),
+    url('/fonts/ModernEra-Medium-woff.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Modern Era';
+  src:
+    url('/fonts/ModernEra-Bold-woff2.woff2') format('woff2'),
+    url('/fonts/ModernEra-Bold-woff.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Modern Era';
+  src:
+    url('/fonts/ModernEra-Black-woff2.woff2') format('woff2'),
+    url('/fonts/ModernEra-Black-woff.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  body {
+    @apply text-brand-dark bg-brand-surface font-sans text-body-main antialiased;
+  }
+  ::selection {
+    @apply bg-brand-teal text-white;
+  }
+
+  /* Typography Base */
+  h1 {
+    @apply text-h1-mobile md:text-h1-desktop font-black text-brand-pureWhite tracking-tight;
+  }
+  
+  h2 {
+    @apply text-h2-mobile md:text-h2-desktop font-black text-brand-dark tracking-tight;
+  }
+  
+  h3 {
+    @apply text-h3-mobile md:text-h3-desktop font-black text-brand-dark;
+  }
+
+  h4 {
+    @apply text-h4-mobile md:text-h4-desktop font-black text-brand-dark;
+  }
+
+  h5 {
+    @apply text-h5-mobile md:text-h5-desktop font-bold text-brand-dark;
+  }
+
+  p {
+    @apply text-body-main text-brand-muted;
+  }
+  
+  p.intro {
+    @apply text-body-intro text-brand-dark;
+  }
+
+  small {
+    @apply text-body-small text-brand-muted;
+  }
+}
+
+@layer components {
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center font-bold px-8 h-[44px] transition-colors duration-300 focus:outline-none;
+  }
+
+  .btn-primary {
+    @apply btn bg-brand-teal text-brand-dark hover:bg-[#70A29C] hover:text-white;
+  }
+
+  .btn-dark {
+    @apply btn bg-brand-dark text-white hover:bg-[#787779];
+  }
+
+  .btn-outline {
+    @apply btn border-2 border-brand-navy text-brand-navy bg-transparent hover:bg-brand-navy hover:text-white;
+  }
+
+  /* Links */
+  .text-link {
+    @apply text-base font-normal text-brand-dark underline decoration-brand-dark underline-offset-4 hover:text-[#70A29C] hover:decoration-[#70A29C] transition-colors duration-300;
+  }
+  
+  .nav-link {
+    @apply relative font-bold text-white hover:text-brand-teal transition-colors py-2;
+  }
+  
+  .nav-link.active::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-1 bg-brand-teal rounded-full;
+  }
+
+  /* Structural Grid Containers */
+  .container-desktop {
+    @apply mx-auto px-6 md:px-12 w-full;
+    max-width: 1440px;
+  }
+}
