@@ -1,16 +1,18 @@
 import { ReactNode } from 'react'
+import { Link } from 'react-router-dom'
 import { Text } from '../atoms/Text'
 
 export type CardProps = {
   icon?: string
   title: string
+  href?: string
   className?: string
   children?: ReactNode
 }
 
-export function Card({ icon, title, className = '', children }: CardProps) {
-  return (
-    <div className={`group flex flex-col items-center transition-colors hover:bg-brand-teal ${className}`.trim()}>
+export function Card({ icon, title, href, className = '', children }: CardProps) {
+  const content = (
+    <>
       {icon && (
         <img 
           src={icon} 
@@ -28,6 +30,22 @@ export function Card({ icon, title, className = '', children }: CardProps) {
         {title}
       </Text>
       {children}
+    </>
+  )
+
+  const sharedClassName = `group flex flex-col items-center transition-colors hover:bg-brand-teal ${className}`.trim()
+
+  if (href) {
+    return (
+      <Link to={href} className={sharedClassName}>
+        {content}
+      </Link>
+    )
+  }
+
+  return (
+    <div className={sharedClassName}>
+      {content}
     </div>
   )
 }

@@ -32,8 +32,8 @@ export function CategoryListing() {
               <Component
                 key={cardData.id}
                 title={cardData.title}
-                // Vite handles absolute root paths mapped gracefully with /src
-                icon={cardData.iconPath} 
+                icon={cardData.iconPath}
+                href={`/training/${cardData.id}`}
                 className="bg-white pt-10"
               >
                 {cardData.bottomBarColor && (

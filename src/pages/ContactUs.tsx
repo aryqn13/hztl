@@ -74,11 +74,10 @@ export function ContactUs() {
 
               <div className="flex flex-col border-b border-brand-dark">
                 <label className="sr-only">Department</label>
-                <select className="w-full appearance-none bg-transparent pb-3 text-base font-semibold text-brand-dark outline-none">
+                <select className="w-full appearance-none bg-transparent pb-3 text-base font-semibold text-brand-dark outline-none" required>
                   <option value="" disabled selected>Department</option>
                   <option value="sales">Sales</option>
                   <option value="support">Support</option>
-                  required
                 </select>
                 
               </div>

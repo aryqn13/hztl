@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react'
-import type { MouseEvent } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import navigationConfig from '../../config/navigation.json'
 import { BrandLogo, IconAccount, IconHamburger, IconClose } from '../atoms/Icons'
+import { logout } from '../../lib/auth'
 import { NavItem } from '../molecules/NavItem'
 
 export type NavbarNavId = 'home' | 'training' | 'certification' | 'contact'
 
 export type NavbarProps = {
-  activeItem?: NavbarNavId
   isLoggedIn?: boolean
 }
 
@@ -20,8 +20,19 @@ const ComponentRegistry = {
   NavItem: NavItem,
 }
 
-export function Navbar({ activeItem, isLoggedIn = true }: NavbarProps) {
+export function Navbar({ isLoggedIn = true }: NavbarProps) {
   const [open, setOpen] = useState(false)
+  const location = useLocation()
+
+  // Determine active nav item from current route
+  const getActiveItem = (): NavbarNavId => {
+    const path = location.pathname
+    if (path.startsWith('/training')) return 'training'
+    if (path.startsWith('/certification')) return 'certification'
+    if (path.startsWith('/contact')) return 'contact'
+    return 'home'
+  }
+  const activeItem = getActiveItem()
 
   useEffect(() => {
     if (!open) return
@@ -39,16 +50,17 @@ export function Navbar({ activeItem, isLoggedIn = true }: NavbarProps) {
     return () => window.removeEventListener('resize', closeOnWide)
   }, [])
 
-  const stopHash = (e: MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault()
-  }
+  // Close mobile menu on route change
+  useEffect(() => {
+    setOpen(false)
+  }, [location.pathname])
 
   return (
     <header className="relative z-50 bg-brand-dark text-white">
       <div className="container-desktop flex h-[88px] items-center gap-4 lg:grid lg:grid-cols-[auto_minmax(0,1fr)_auto] lg:items-center lg:gap-6">
-        <a href="/" className="inline-flex shrink-0 items-center py-2" onClick={stopHash}>
+        <Link to="/" className="inline-flex shrink-0 items-center py-2">
           <BrandLogo className="h-12 w-auto lg:h-14" />
-        </a>
+        </Link>
 
         <nav className="hidden justify-self-center lg:block" aria-label="Primary">
           <ul className="flex items-center gap-10">
@@ -64,6 +76,7 @@ export function Navbar({ activeItem, isLoggedIn = true }: NavbarProps) {
                   key={itemConfig.id}
                   id={itemConfig.id}
                   label={itemConfig.label}
+                  href={itemConfig.href}
                   hasDropdown={itemConfig.hasDropdown}
                   isActive={activeItem === itemConfig.id}
                 />
@@ -74,25 +87,23 @@ export function Navbar({ activeItem, isLoggedIn = true }: NavbarProps) {
 
         {isLoggedIn ? (
           <div className="hidden items-center justify-self-end lg:flex">
-            <a
-              href="#"
-              onClick={stopHash}
+            <Link
+              to="/profile"
               className="inline-flex items-center gap-2 rounded border border-white/35 px-4 py-2.5 text-base font-bold leading-7 text-white transition-colors hover:border-white/60 hover:bg-white/[0.06]"
             >
               <IconAccount className="shrink-0" />
               <span>My Account</span>
-            </a>
+            </Link>
           </div>
         ) : (
           <div className="hidden items-center justify-self-end lg:flex">
-            <a
-              href="#"
-              onClick={stopHash}
+            <Link
+              to="/login"
               className="inline-flex items-center gap-2 text-base font-bold leading-7 text-white transition-colors hover:text-white/85"
             >
               <IconAccount className="shrink-0" />
               <span>Log in</span>
-            </a>
+            </Link>
           </div>
         )}
 
@@ -118,9 +129,9 @@ export function Navbar({ activeItem, isLoggedIn = true }: NavbarProps) {
           aria-modal="true"
         >
           <div className="flex items-center justify-between border-b border-white/15 px-5 py-4">
-            <a href="/" className="inline-flex py-1" onClick={stopHash}>
+            <Link to="/" className="inline-flex py-1">
               <BrandLogo className="h-11 w-auto" />
-            </a>
+            </Link>
             <button
               type="button"
               className="inline-flex rounded p-2 text-white hover:bg-white/10"
@@ -143,6 +154,7 @@ export function Navbar({ activeItem, isLoggedIn = true }: NavbarProps) {
                     key={itemConfig.id}
                     id={itemConfig.id}
                     label={itemConfig.label}
+                    href={itemConfig.href}
                     hasDropdown={itemConfig.hasDropdown}
                     isActive={activeItem === itemConfig.id}
                     isMobile={true}
@@ -154,20 +166,24 @@ export function Navbar({ activeItem, isLoggedIn = true }: NavbarProps) {
 
             {isLoggedIn ? (
               <div className="mt-auto border-t border-white/15 pb-10 pt-8">
-                <a href="#" onClick={stopHash} className="flex items-center gap-3 text-base font-bold text-white">
+                <Link to="/profile" className="flex items-center gap-3 text-base font-bold text-white">
                   <IconAccount />
                   My Account
-                </a>
-                <a href="#" onClick={stopHash} className="mt-4 inline-block text-base font-normal text-white underline underline-offset-4">
+                </Link>
+                <button
+                  type="button"
+                  onClick={() => { logout(); setOpen(false) }}
+                  className="mt-4 inline-block text-base font-normal text-white underline underline-offset-4 hover:text-white/80 transition-colors"
+                >
                   Log out
-                </a>
+                </button>
               </div>
             ) : (
               <div className="mt-auto border-t border-white/15 pb-10 pt-8">
-                <a href="#" onClick={stopHash} className="flex items-center gap-3 text-base font-bold text-white transition-colors hover:text-white/85">
+                <Link to="/login" className="flex items-center gap-3 text-base font-bold text-white transition-colors hover:text-white/85">
                   <IconAccount />
                   Log in
-                </a>
+                </Link>
               </div>
             )}
           </nav>

@@ -3,6 +3,7 @@
     "id": "home",
     "type": "NavItem",
     "label": "Home",
+    "href": "/",
     "hasDropdown": false,
     "authRequired": false
   },
@@ -10,6 +11,7 @@
     "id": "training",
     "type": "NavItem",
     "label": "Training",
+    "href": "/training",
     "hasDropdown": true,
     "authRequired": true
   },
@@ -17,6 +19,7 @@
     "id": "certification",
     "type": "NavItem",
     "label": "Certification",
+    "href": "/certification",
     "hasDropdown": true,
     "authRequired": true
   },
@@ -24,6 +27,7 @@
     "id": "contact",
     "type": "NavItem",
     "label": "Contact us",
+    "href": "/contact",
     "hasDropdown": false,
     "authRequired": false
   }

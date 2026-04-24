@@ -1,0 +1,259 @@
+{
+  "categories": [
+    {
+      "id": "frontend",
+      "type": "Card",
+      "title": "Frontend Solutuions",
+      "iconPath": "/src/images/frontend-solution-logo.svg",
+      "bottomBarColor": "brand-teal"
+    },
+    {
+      "id": "backend",
+      "type": "Card",
+      "title": "Backend Solutions",
+      "iconPath": "/src/images/backend-solution-logo.svg",
+      "bottomBarColor": "brand-teal"
+    },
+    {
+      "id": "devops",
+      "type": "Card",
+      "title": "DevOps Solutions",
+      "iconPath": "/src/images/devops-solution-logo.svg",
+      "bottomBarColor": "brand-teal"
+    },
+    {
+      "id": "qa",
+      "type": "Card",
+      "title": "QA Solutuions",
+      "iconPath": "/src/images/QA-solution-logo.svg",
+      "bottomBarColor": "brand-teal"
+    },
+    {
+      "id": "ui",
+      "type": "Card",
+      "title": "UI Solutions",
+      "iconPath": "/src/images/UI-solution-logo.svg",
+      "bottomBarColor": "brand-teal"
+    },
+    {
+      "id": "open",
+      "type": "Card",
+      "title": "Open Solutions",
+      "iconPath": "/src/images/open-solution-logo.svg",
+      "bottomBarColor": "brand-teal"
+    }
+  ],
+  "courses": {
+    "frontend": {
+      "title": "Frontend Training Courses",
+      "heroTitle": "Frontend Solutions",
+      "tags": ["All", "HTML", "CSS", "JS", "Bootstrap", "Ajax", "HTML", "CSS", "Bootstrap", "Bootstrap", "Ajax", "HTML", "CSS"],
+      "items": [
+        {
+          "id": "web-development-basic-html",
+          "title": "Web Development Basic - HTML",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.",
+          "duration": "58min"
+        },
+        {
+          "id": "advanced-html-concepts",
+          "title": "Advanced HTML Concepts",
+          "description": "Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem Ipsum has been the industry's dummy.",
+          "duration": "30min"
+        },
+        {
+          "id": "advanced-html-css",
+          "title": "Advanced HTML CSS",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.",
+          "duration": "52min"
+        },
+        {
+          "id": "javascript-for-beginners",
+          "title": "JavaScript for Beginners",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has dummy.",
+          "duration": "52min"
+        },
+        {
+          "id": "advanced-html-concepts-2",
+          "title": "Advanced HTML Concepts",
+          "description": "Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem Ipsum has been the industry's dummy.",
+          "duration": "30min"
+        },
+        {
+          "id": "advanced-css",
+          "title": "Advanced CSS",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.",
+          "duration": "52min"
+        },
+        {
+          "id": "javascript-for-beginners-2",
+          "title": "JavaScript for Beginners",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has dummy.",
+          "duration": "52min"
+        }
+      ]
+    },
+    "backend": {
+      "title": "Backend Training Courses",
+      "heroTitle": "Backend Solutions",
+      "tags": ["All", "Node.js", "Python", "Java", "SQL", "MongoDB"],
+      "items": [
+        {
+          "id": "nodejs-basics",
+          "title": "Node.js Basics",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.",
+          "duration": "45min"
+        },
+        {
+          "id": "python-fundamentals",
+          "title": "Python Fundamentals",
+          "description": "Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem Ipsum has been the industry's dummy.",
+          "duration": "60min"
+        },
+        {
+          "id": "sql-mastery",
+          "title": "SQL Mastery",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.",
+          "duration": "40min"
+        }
+      ]
+    },
+    "devops": {
+      "title": "DevOps Training Courses",
+      "heroTitle": "DevOps Solutions",
+      "tags": ["All", "Docker", "Kubernetes", "CI/CD", "AWS", "Azure"],
+      "items": [
+        {
+          "id": "docker-essentials",
+          "title": "Docker Essentials",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.",
+          "duration": "55min"
+        },
+        {
+          "id": "kubernetes-basics",
+          "title": "Kubernetes Basics",
+          "description": "Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem Ipsum has been the industry's dummy.",
+          "duration": "50min"
+        }
+      ]
+    },
+    "qa": {
+      "title": "QA Training Courses",
+      "heroTitle": "QA Solutuions",
+      "tags": ["All", "Selenium", "Jest", "Cypress", "Testing"],
+      "items": [
+        {
+          "id": "selenium-testing",
+          "title": "Selenium Testing",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.",
+          "duration": "48min"
+        }
+      ]
+    },
+    "ui": {
+      "title": "UI Training Courses",
+      "heroTitle": "UI Solutions",
+      "tags": ["All", "Figma", "Sketch", "Adobe XD"],
+      "items": [
+        {
+          "id": "figma-fundamentals",
+          "title": "Figma Fundamentals",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.",
+          "duration": "42min"
+        }
+      ]
+    },
+    "open": {
+      "title": "Open Training Courses",
+      "heroTitle": "Open Solutions",
+      "tags": ["All", "Open Source", "Linux", "Git"],
+      "items": [
+        {
+          "id": "git-essentials",
+          "title": "Git Essentials",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.",
+          "duration": "35min"
+        }
+      ]
+    }
+  },
+  "courseDetails": {
+    "web-development-basic-html": {
+      "title": "Web Development Basic - HTML",
+      "category": "frontend",
+      "categoryTitle": "Frontend Solutions",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.",
+      "codeImage": "/src/images/details.jpg",
+      "afterImageText": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.",
+      "bulletPoints": [
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "Lorem Ipsum has been the industry's standard dummy.",
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+      ],
+      "videoThumbnail": "/src/images/video-thumbnail.jpg",
+      "afterVideoText": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.",
+      "relatedCourses": [
+        {
+          "id": "advanced-html-concepts",
+          "title": "Advanced HTML Concepts",
+          "description": "Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem Ipsum has industry's dummy.",
+          "image": "/src/images/related-training-course-1.jpg"
+        },
+        {
+          "id": "advanced-css",
+          "title": "Advanced CSS",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.",
+          "image": "/src/images/related-training-course-2.jpg"
+        },
+        {
+          "id": "advanced-html-concepts-2",
+          "title": "Advanced HTML Concepts",
+          "description": "Lorem Ipsum is simply dummy text of the printing industry. Lorem Ipsum has industry's dummy.",
+          "image": "/src/images/related-training-course-3.jpg"
+        }
+      ],
+      "feedbacks": [
+        {
+          "id": 1,
+          "name": "Gautam Ravaliya",
+          "avatar": "/src/images/default-user.svg",
+          "rating": 3,
+          "date": "21 January 2022",
+          "comment": "Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem Ipsum has industry's dummy."
+        },
+        {
+          "id": 2,
+          "name": "Shweta Jha",
+          "avatar": "/src/images/default-user.svg",
+          "rating": 4,
+          "date": "21 January 2022",
+          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software."
+        },
+        {
+          "id": 3,
+          "name": "Ajay Srivastava",
+          "avatar": "/src/images/default-user.svg",
+          "rating": 4,
+          "date": "11 January 2022",
+          "comment": "Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem Ipsum has industry's dummy. It has survived not only five"
+        },
+        {
+          "id": 4,
+          "name": "Smriti Khare",
+          "avatar": "/src/images/default-user.svg",
+          "rating": 3,
+          "date": "08 January 2022",
+          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic."
+        },
+        {
+          "id": 5,
+          "name": "Khushboo Sorthiya",
+          "avatar": "/src/images/default-user.svg",
+          "rating": 4,
+          "date": "01 January 2022",
+          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummisince the 1500s, when an unknown printe."
+        }
+      ]
+    }
+  }
+}
